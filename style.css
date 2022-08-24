@@ -45,6 +45,11 @@
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    user-select: none;
+}
+
+.square.highlight {
+    background-color: rgb(169, 81, 81);
 }
 
 .playerX {

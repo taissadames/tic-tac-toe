@@ -36,5 +36,18 @@
 </body>
 <script>
 
+var square = document.querySelectorAll('.square')
+// to convert this NodeList into a single array:
+var squareArr = [square[0], square[1], square[2], square[3], square[4], square[5], square[6], square[7], square[8]];
+
+let playerX = 'X'
+let playerO = 'O'
+
+for (let i = 0; i <squareArr.length; i = i + 1) {
+        squareArr[i].addEventListener('click', function (event) {
+            squareArr[i].textContent = playerX
+        })
+    }
+
 </script>
 </html>
