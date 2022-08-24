@@ -16,15 +16,15 @@
             Player <span class="player-x">X</span>'s turn
         </section>
         <section class="board">
-            <div class="square box1"></div>
-            <div class="square box2"></div>
-            <div class="square box3"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
+            <div class="square1"></div>
+            <div class="square2"></div>
+            <div class="square3"></div>
+            <div class="square4"></div>
+            <div class="square5"></div>
+            <div class="square6"></div>
+            <div class="square7"></div>
+            <div class="square8"></div>
+            <div class="square9"></div>
         </section>
         <section class="display-end-start"></section>
         <section class="controls">
@@ -36,10 +36,17 @@
 </body>
 <script>
 
-var square = document.querySelectorAll('.square')
-var box1 = document.querySelector('.box1')
-var box2 = document.querySelector('.box2')
-var box3 = document.querySelector('.box3')
+var playBoard = document.querySelector('.board')
+
+var square1 = document.querySelector('.square1')
+var square2 = document.querySelector('.square2')
+var square3 = document.querySelector('.square3')
+var square4 = document.querySelector('.square4')
+var square5 = document.querySelector('.square5')
+var square6 = document.querySelector('.square6')
+var square7 = document.querySelector('.square7')
+var square8 = document.querySelector('.square8')
+var square9 = document.querySelector('.square9')
 
 let player1 = 'X'
 let player2 = 'O'
@@ -68,20 +75,29 @@ let player2 = 'O'
 // }
 // winner()
 
+
 function winner() {
-    if (box1.contains(player1) && box2.contains(player1) && box3.contains(player1))
-    alert(player1 + " is the winner!")
+    if ((square1.contains(player1) && square2.contains(player1) && square3.contains(player1)) === true) {
+        alert(player1 + " is the winner!")
+    }
 }
 
-for (let i = 0; i < square.length; i++) {
-    square[i].addEventListener('click', function (event) {
-        if (i % 2 === 0) {
-            square[i].textContent = player1
-        } else {
-            square[i].textContent = player2
-        }    
+
+// for (let i = 0; i < square.length; i++) {
+var turnCounter = 1
+playBoard.addEventListener('click', function (event) {
+    let box = event.target
+    if (turnCounter % 2 === 0) {
+        box.textContent = player1
+        turnCounter++
+        winner()
+    } else {
+        box.textContent = player2
+        turnCounter++
+        winner()
+    }    
     })
-}
+// }
 
 </script>
 </html>

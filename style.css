@@ -36,7 +36,15 @@
     max-width: 300px;
 }
 
-.square {
+.square1,
+.square2,
+.square3,
+.square4,
+.square5,
+.square6,
+.square7,
+.square8,
+.square9 {
     border: 3px solid white;
     min-width: 100px;
     min-height: 100px;
