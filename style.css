@@ -5,7 +5,7 @@
 
 .background {
     background-color: rgb(84, 80, 80);
-    height: 100vh;
+    max-height: max-content;
     padding-top: 1px;
 }
 
@@ -85,4 +85,12 @@
     font-size: 20px;
     margin-left: 1em;
     cursor: pointer;
+}
+
+.result {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

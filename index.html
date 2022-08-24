@@ -30,6 +30,7 @@
         <section class="controls">
             <button id="reset">Reset</button>
         </section>
+        <section class="result"></section>
 
     </main>
     
@@ -50,6 +51,9 @@ var square9 = document.querySelector('.square9')
 
 let player1 = 'X'
 let player2 = 'O'
+
+var result = document.querySelector('.result')
+result.textContent = 'Player X won!'
 
 // let winningCombinations = [
 //     [square[0], square[1], square[2]]
@@ -75,15 +79,8 @@ let player2 = 'O'
 // }
 // winner()
 
-
-function winner() {
-    if ((square1.contains(player1) && square2.contains(player1) && square3.contains(player1)) === true) {
-        alert(player1 + " is the winner!")
-    }
-}
-
-
 // for (let i = 0; i < square.length; i++) {
+
 var turnCounter = 1
 playBoard.addEventListener('click', function (event) {
     let box = event.target
@@ -97,7 +94,52 @@ playBoard.addEventListener('click', function (event) {
         winner()
     }    
     })
+
+//     function winner() {
+//     if ((square1.textContent = player1) && (square2.textContent = player1) && (square3.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square4.textContent = player1) && (square5.textContent = player1) && (square6.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square7.textContent = player1) && (square8.textContent = player1) && (square9.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square1.textContent = player1) && (square4.textContent = player1) && (square7.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square2.textContent = player1) && (square5.textContent = player1) && (square8.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square1.textContent = player1) && (square5.textContent = player1) && (square9.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square3.textContent = player1) && (square5.textContent = player1) && (square7.textContent = player1)) {
+//         return result.textContent = 'Player X won!'
+//     } else if ((square1.textContent = player2) && (square2.textContent = player2) && (square3.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square4.textContent = player2) && (square5.textContent = player2) && (square6.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square7.textContent = player2) && (square8.textContent = player2) && (square9.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square1.textContent = player2) && (square4.textContent = player2) && (square7.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square2.textContent = player2) && (square5.textContent = player2) && (square8.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square1.textContent = player2) && (square5.textContent = player2) && (square9.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else if ((square3.textContent = player2) && (square5.textContent = player2) && (square7.textContent = player2)) {
+//         return result.textContent = 'Player O won!'
+//     } else {
+//         return result.textContent = "It's a tie! Play again."
+//     }
 // }
+// winner()
+
+function winner() {
+    if (((square1.textContent = player1) && (square2.textContent = player1) && (square3.textContent = player1)) || ((square4.textContent = player1) && (square5.textContent = player1) && (square6.textContent = player1)) || ((square7.textContent = player1) && (square8.textContent = player1) && (square9.textContent = player1)) || ((square1.textContent = player1) && (square4.textContent = player1) && (square7.textContent = player1)) || ((square2.textContent = player1) && (square5.textContent = player1) && (square8.textContent = player1)) || ((square1.textContent = player1) && (square5.textContent = player1) && (square9.textContent = player1)) || ((square3.textContent = player1) && (square5.textContent = player1) && (square7.textContent = player1))) {
+        return result.textContent = 'Player X won!'
+    } else if (((square1.textContent = player2) && (square2.textContent = player2) && (square3.textContent = player2)) || ((square4.textContent = player2) && (square5.textContent = player2) && (square6.textContent = player2)) || ((square7.textContent = player2) && (square8.textContent = player2) && (square9.textContent = player2)) || ((square1.textContent = player2) && (square4.textContent = player2) && (square7.textContent = player2)) || ((square2.textContent = player2) && (square5.textContent = player2) && (square8.textContent = player2)) || ((square1.textContent = player2) && (square5.textContent = player2) && (square9.textContent = player2)) || ((square3.textContent = player2) && (square5.textContent = player2) && (square7.textContent = player2))) {
+        return result.textContent = 'Player O won!'
+    } else {
+        return result.textContent = "It's a tie! Play again."
+    }
+}
+winner()
 
 </script>
 </html>
