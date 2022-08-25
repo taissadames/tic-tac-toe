@@ -1,24 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 body {
 	background-color: #AAA;
 	text-align: center;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'DynaPuff', cursive;
 	font-size: 1.3em;
-
+    background-image: url(https://cutewallpaper.org/22/skye-and-everest-wallpapers/7823922.jpg);
+    background-size: cover;
 }
+
 
 h3{
     position:relative;
-	color: white;
+	color: rgb(62, 59, 61);
 	margin-left: -10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .result {
-color: white;
+color: rgb(62, 59, 61);
 margin-top: 70px;
+animation: colorFade 3s infinite;
 }
 
 .title {
-    color: white;
+    color: rgb(160, 0, 107);
+    font-size: 30px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
 }
 
 .board {
@@ -26,17 +35,20 @@ margin-top: 70px;
 } 
 
 input {
-	background-color:#d3a0d8;
+	background-color:#cc7f9b;
 	font-size: 6vw;
 	width: 10vw;
 	height:10vw;
 	margin: 0;
-	color: #d3a0d8;
-
+	color: #cc7f9b;
+    border-style: solid;
+    opacity: 0.9;
 }
 
 #player {
 	display: inline;
+    color: rgb(62, 59, 61);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #restart {
@@ -45,8 +57,42 @@ input {
 	width: 12vw;
 	height:6vw;
 	font-size: 20px;
-	color: black;
+	color: rgb(62, 59, 61);
     border-radius: 10px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-style: dotted;
+	font-family: 'DynaPuff', cursive;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0.5s all;
 
+}
+
+#restart:focus {
+    background-color: rgb(195, 77, 156);
+}
+
+@keyframes colorFade {
+    from {
+        color: rgb(62, 59, 61);
+    }
+    to {
+        color: rgb(235, 9, 190);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 18vw;
+        height: 18vw;
+        border-radius: none;
+        font-size: 40px;
+    }
+
+    #restart {
+        font-size: 20px;
+        width: 36vw;
+        height: 9vw;
+    }
+    body {
+        background-size: cover;
+    }
 }

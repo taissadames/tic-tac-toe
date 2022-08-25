@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+	<div id="front"></div>
+	<div id="back"></div>
 	<main>
         <section class="title"><h1>Tic Tac Toe</h1></section>
+		<h2 class="result"></h2>
         <section class="board">
             <div> <input type="button" value="_"><input type="button" value="_"><input type="button" value="_"> </div>
             <div> <input type="button" value="_"><input type="button" value="_"><input type="button" value="_"> </div>
@@ -19,7 +22,6 @@
 
 	<input type="button" value="Restart" id="restart"> 
 	<h3>Player turn: <span id="player"></span></h3>
-	<h2 class="result"></h2>
 </body>
 
 </html>
@@ -54,8 +56,8 @@ for (var i = 0; i < 9; i++) {
 restartButton.addEventListener('click', (event) => {
 	for (var i = 0; i< 9; i++) {
 		square[i].value='_'; //clear all squares
-		square[i].style.color='#d3a0d8'; //value '_' appears
-		square[i].style.backgroundColor='#d3a0d8'; //makes background 'invisible'
+		square[i].style.color='#cc7f9b'; //value '_' appears
+		square[i].style.backgroundColor='#cc7f9b'; //makes background 'invisible'
 	}
 	result.innerText = " "
 	winner = '_' //Reset winner
@@ -87,58 +89,58 @@ var changePlayer = function() {
 //Winning possibilities: Color changes if a combination is achieved.
 var victory = function() {
 	if ((square[0].value == square[1].value) && (square[1].value == square[2].value) && square[0].value != '_' ) {
-		square[0].style.backgroundColor='#0F0';
-		square[1].style.backgroundColor='#0F0';
-		square[2].style.backgroundColor='#0F0';
+		square[0].style.backgroundColor = 'orchid';
+		square[1].style.backgroundColor = 'orchid';
+		square[2].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[0].value + " is the winner!"
 
 	} else if ((square[3].value == square[4].value) && (square[4].value == square[5].value) && square[3].value!='_' ) {
-		square[3].style.backgroundColor='#0F0';
-		square[4].style.backgroundColor='#0F0';
-		square[5].style.backgroundColor='#0F0';
+		square[3].style.backgroundColor = 'orchid';
+		square[4].style.backgroundColor = 'orchid';
+		square[5].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[3].value  + " is the winner!"
 
 	} else if ((square[6].value == square[7].value) && (square[7].value == square[8].value) && square[6].value != '_' ) {
-		square[6].style.backgroundColor='#0F0';
-		square[7].style.backgroundColor='#0F0';
-		square[8].style.backgroundColor='#0F0';
+		square[6].style.backgroundColor = 'orchid';
+		square[7].style.backgroundColor = 'orchid';
+		square[8].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[6].value + " is the winner!"
 
 	} else if ((square[0].value == square[3].value) && (square[3].value == square[6].value) && square[0].value != '_' ) {
-		square[0].style.backgroundColor='#0F0';
-		square[3].style.backgroundColor='#0F0';
-		square[6].style.backgroundColor='#0F0';
+		square[0].style.backgroundColor = 'orchid';
+		square[3].style.backgroundColor = 'orchid';
+		square[6].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[0].value + " is the winner!"
 
 	} else if ((square[1].value == square[4].value) && (square[4].value == square[7].value) && square[1].value != '_' ) {
-		square[1].style.backgroundColor = '#0F0';
-		square[4].style.backgroundColor = '#0F0';
-		square[7].style.backgroundColor = '#0F0';
+		square[1].style.backgroundColor = 'orchid';
+		square[4].style.backgroundColor = 'orchid';
+		square[7].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[1].value+ " is the winner!"
 
 	} else if ((square[2].value == square[5].value) && (square[5].value == square[8].value) && square[2].value != '_' ) {
-		square[2].style.backgroundColor = '#0F0';
-		square[5].style.backgroundColor = '#0F0';
-		square[8].style.backgroundColor = '#0F0';
+		square[2].style.backgroundColor = 'orchid';
+		square[5].style.backgroundColor = 'orchid';
+		square[8].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[2].value + " is the winner!"
 
 	} else if ((square[0].value == square[4].value) && (square[4].value == square[8].value) && square[0].value != '_' ) {
-		square[0].style.backgroundColor = '#0F0';
-		square[4].style.backgroundColor = '#0F0';
-		square[8].style.backgroundColor = '#0F0';
+		square[0].style.backgroundColor = 'orchid';
+		square[4].style.backgroundColor = 'orchid';
+		square[8].style.backgroundColor = 'orchid';
 		
 		return result.innerText = "Player " + square[0].value + " is the winner!"
 
 	} else if ((square[2].value == square[4].value) && (square[4].value == square[6].value) && square[2].value != '_' ) {
-		square[2].style.backgroundColor = '#0F0';
-		square[4].style.backgroundColor = '#0F0';
-		square[6].style.backgroundColor = '#0F0';
+		square[2].style.backgroundColor = 'orchid';
+		square[4].style.backgroundColor = 'orchid';
+		square[6].style.backgroundColor = 'orchid';
 
 		return result.innerText = "Player " + square[2].value + " is the winner!"
 	} else if ((winner == '_') && (square[0].value != '_') && (square[1].value != '_') && (square[2].value != '_') && (square[3].value != '_') && (square[4].value != '_') && (square[5].value != '_') && (square[6].value != '_') && (square[7].value != '_')&& (square[8].value != '_')) {
