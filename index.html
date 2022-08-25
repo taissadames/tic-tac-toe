@@ -65,10 +65,10 @@ restartButton.addEventListener('click', (event) => {
 var randomSelectPlayer = function() {
 	if (Math.floor(Math.random() * 2) == 0) {
 		currentPlayer = "O" //defines player O as current player
-		firstPlayer.innerText="O" //displays current player as player O
+		firstPlayer.innerText = "O" //displays current player as player O
 	} else {
 		currentPlayer = "X" //defines current player as player X
-		firstPlayer.innerText="X" //displays current player as player X
+		firstPlayer.innerText = "X" //displays current player as player X
 	}
 }
 randomSelectPlayer()
@@ -142,7 +142,7 @@ var victory = function() {
 
 		return result.innerText = "Player " + square[2].value + " is the winner!"
 	} else if ((winner == '_') && (square[0].value != '_') && (square[1].value != '_') && (square[2].value != '_') && (square[3].value != '_') && (square[4].value != '_') && (square[5].value != '_') && (square[6].value != '_') && (square[7].value != '_')&& (square[8].value != '_')) {
-		return result.innerText = "It's a tie! Play again."
+		return result.innerText = "It's a draw! Play again."
 	}						
     return '_'
 }

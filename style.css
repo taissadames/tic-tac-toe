@@ -7,14 +7,14 @@ body {
 }
 
 h3{
-    position: absolute;
+    position:relative;
 	color: white;
-	margin-left: 100px;
+	margin-left: -10px;
 }
 
 .result {
 color: white;
-margin-top: 200px;
+margin-top: 70px;
 }
 
 .title {
@@ -40,11 +40,11 @@ input {
 }
 
 #restart {
-	position: absolute;
-	margin-top: 2%;
+	position:relative;
+	margin-top: 5%;
 	width: 12vw;
 	height:6vw;
-	font-size: 1em;
+	font-size: 20px;
 	color: black;
     border-radius: 10px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
