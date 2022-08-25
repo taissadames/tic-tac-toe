@@ -6,10 +6,15 @@ body {
 
 }
 
-h2{
+h3{
     position: absolute;
 	color: white;
 	margin-left: 100px;
+}
+
+.result {
+color: white;
+margin-top: 200px;
 }
 
 .title {
