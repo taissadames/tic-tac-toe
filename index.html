@@ -44,8 +44,8 @@ for (var i = 0; i < 9; i++) {
 			event.target.value = currentPlayer
 			event.target.style.color='black'
 
-			winner = victory(); //checks if any of the players has own the game.
 			changePlayer(); //change players between X player and O player
+			winner = victory(); //checks if any of the players has own the game.
 		}
 	})
 }
@@ -57,6 +57,7 @@ restartButton.addEventListener('click', (event) => {
 		square[i].style.color='#d3a0d8'; //value '_' appears
 		square[i].style.backgroundColor='#d3a0d8'; //makes background 'invisible'
 	}
+	result.innerText = " "
 	winner = '_' //Reset winner
 	randomSelectPlayer() //Random select first player
 })
@@ -89,7 +90,7 @@ var victory = function() {
 		square[0].style.backgroundColor='#0F0';
 		square[1].style.backgroundColor='#0F0';
 		square[2].style.backgroundColor='#0F0';
-		
+
 		return result.innerText = "Player " + square[0].value + " is the winner!"
 
 	} else if ((square[3].value == square[4].value) && (square[4].value == square[5].value) && square[3].value!='_' ) {
@@ -140,7 +141,7 @@ var victory = function() {
 		square[6].style.backgroundColor = '#0F0';
 
 		return result.innerText = "Player " + square[2].value + " is the winner!"
-	}							
+	} 							
     return '_'
 }
 
