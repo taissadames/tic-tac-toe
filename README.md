@@ -34,3 +34,4 @@ My first ever project! The classic tic-tac-toe game.
 - I'd love to replace the 'X' and 'O' to some cool figurines.
 - Add a scoreboard.
 - Add sounds.
+- Replace the background with a better quality image.
