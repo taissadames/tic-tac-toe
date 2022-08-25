@@ -141,7 +141,9 @@ var victory = function() {
 		square[6].style.backgroundColor = '#0F0';
 
 		return result.innerText = "Player " + square[2].value + " is the winner!"
-	} 							
+	} else if ((winner == '_') && (square[0].value != '_') && (square[1].value != '_') && (square[2].value != '_') && (square[3].value != '_') && (square[4].value != '_') && (square[5].value != '_') && (square[6].value != '_') && (square[7].value != '_')&& (square[8].value != '_')) {
+		return result.innerText = "It's a tie! Play again."
+	}						
     return '_'
 }
 
