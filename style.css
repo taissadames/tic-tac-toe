@@ -12,19 +12,20 @@ body {
 
 h3{
     position:relative;
-	color: rgb(62, 59, 61);
+	color: rgba(255, 255, 255, 0.886);
 	margin-left: -10px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .result {
 color: rgb(62, 59, 61);
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 margin-top: 70px;
 animation: colorFade 3s infinite;
 }
 
 .title {
-    color: rgb(160, 0, 107);
+    color: rgba(255, 255, 255, 0.886);
     font-size: 30px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     
@@ -47,7 +48,7 @@ input {
 
 #player {
 	display: inline;
-    color: rgb(62, 59, 61);
+    color: rgba(255, 255, 255, 0.886);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -57,7 +58,7 @@ input {
 	width: 12vw;
 	height:6vw;
 	font-size: 20px;
-	color: rgb(62, 59, 61);
+	color: rgba(255, 255, 255, 0.886);
     border-radius: 10px;
     border-style: dotted;
 	font-family: 'DynaPuff', cursive;
@@ -72,10 +73,10 @@ input {
 
 @keyframes colorFade {
     from {
-        color: rgb(62, 59, 61);
+        color: rgba(255, 255, 255, 0.886);
     }
     to {
-        color: rgb(235, 9, 190);
+        color: rgb(139, 1, 112);
     }
 }
 

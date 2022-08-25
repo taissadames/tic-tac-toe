@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div id="front"></div>
@@ -44,7 +47,7 @@ for (var i = 0; i < 9; i++) {
 		//checks if the square value is empty
 		if ( (event.target.value == '_') && (winner == '_')) {
 			event.target.value = currentPlayer
-			event.target.style.color='black'
+			event.target.style.color = 'rgba(255, 255, 255, 0.886)'
 
 			changePlayer(); //change players between X player and O player
 			winner = victory(); //checks if any of the players has own the game.
